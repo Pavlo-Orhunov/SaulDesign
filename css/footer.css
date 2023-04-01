@@ -1,0 +1,90 @@
+.footer {
+  padding-top: 46px;
+  padding-bottom: 50px;
+  border-top: 1px solid rgba(238, 238, 238, 0.1);
+}
+@media (max-width: 767.98px) {
+  .footer {
+    padding-top: 2.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+}
+.footer__menu {
+}
+.menu-footer {
+}
+.menu-footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+.menu-footer__item {
+  transition: transform 0.3s ease 0s;
+  -webkit-transition: transform 0.3s ease 0s;
+  -moz-transition: transform 0.3s ease 0s;
+}
+.menu-footer__item:active {
+  transform: scale(0.95);
+}
+.menu-footer__link {
+  color: var(--color-font);
+  padding-left: 34px;
+}
+.menu-footer__link--home {
+  background: url("../img/footer/home.svg") left no-repeat;
+}
+.menu-footer__link--about {
+  background: url("../img/footer/user.svg") left no-repeat;
+}
+.menu-footer__link--contact {
+  background: url("../img/footer/phone.svg") left no-repeat;
+}
+
+@media (max-width: 479.98px) {
+  .menu-footer__list {
+    gap: 2rem;
+  }
+  .menu-footer__link {
+    padding-top: 40px;
+    padding-left: 0;
+  }
+  .menu-footer__link--home {
+    background: url("../img/footer/home.svg") 15px 15px no-repeat;
+  }
+  .menu-footer__link--about {
+    background: url("../img/footer/user.svg") 30px 15px no-repeat;
+  }
+  .menu-footer__link--contact {
+    background: url("../img/footer/phone.svg") 20px 15px no-repeat;
+  }
+}
+.footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.social {
+}
+.social__link {
+  transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+  -webkit-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+  -moz-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+}
+.social__link:hover {
+  opacity: 0.5;
+}
+.social__link:active {
+  transform: scale(0.85);
+}

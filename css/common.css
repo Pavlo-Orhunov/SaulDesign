@@ -1,0 +1,94 @@
+/* -------hide element--------- */
+.hide {
+  display: none;
+}
+/* -------headers--------- */
+.title-h2 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1.5; /* 96/64 */
+}
+.title-h2 span {
+  color: var(--color-accent);
+}
+@media (max-width: 479.98px) {
+  .title-h2 {
+    font-size: 3rem;
+  }
+}
+
+/* -----------buttons--------- */
+.button-accent,
+.button-gray {
+  display: inline-block;
+  text-align: center;
+  border: none;
+  padding: 0.625rem 2rem;
+  margin: 0;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  line-height: 1.5; /* 27/18 */
+  font-weight: 700;
+  color: var(--color-font);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease 0s, transform 0.3s ease 0s;
+  -webkit-transition: background-color 0.3s ease 0s, transform 0.3s ease 0s;
+  -moz-transition: background-color 0.3s ease 0s, transform 0.3s ease 0s;
+}
+.button-accent,
+.button-gray.active {
+  background-color: var(--color-accent);
+}
+.button-gray {
+  background-color: var(--color-gray);
+}
+
+.button-accent:hover,
+.button-accent:focus {
+  background-color: hsl(183, 100%, 30%);
+}
+.button-gray:hover,
+.button-gray:focus {
+  background-color: hsla(217, 10%, 25%, 1);
+}
+
+.button-accent:active,
+.button-gray:active {
+  transform: scale(0.95);
+}
+
+/* ---------underline--------- */
+@media (min-width: 991.98px) {
+  .underline-white,
+  .underline-accent {
+    position: relative;
+  }
+  .underline-white::after,
+  .underline-accent::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    margin-top: 3px;
+    height: 2px;
+    width: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transition: width 0.3s ease 0s;
+    -webkit-transition: width 0.3s ease 0s;
+    -moz-transition: width 0.3s ease 0s;
+  }
+  .underline-white::after {
+    background-color: var(--color-font);
+  }
+  .underline-accent::after {
+    background-color: var(--color-accent);
+  }
+
+  .underline-white:hover::after,
+  .underline-accent:hover::after {
+    width: 120%;
+  }
+}
