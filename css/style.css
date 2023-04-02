@@ -179,10 +179,7 @@ body {
 .about__image img {
   max-width: 100%;
 }
-@media (max-width: 1200px) {
-}
-@media (max-width: 1024px) {
-}
+
 @media (max-width: 991.98px) {
   .about {
     padding-top: 2rem;
@@ -269,6 +266,12 @@ body {
   height: 100%;
   top: 0;
   left: 0;
+}
+@media (max-width: 991.98px) {
+  .works {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 @media (max-width: 767.98px) {
   .works {
