@@ -11,7 +11,8 @@ function documentActions(e) {
   // scroll
   if (targetElement.hasAttribute("data-goto")) {
     const gotoElement = document.querySelector(`${targetElement.dataset.goto}`)
-    const headerHeight = document.querySelector(`.header`).offsetHeight
+    const header = document.querySelector(".header")
+    const headerHeight = header ? header.offsetHeight : 0
 
     if (gotoElement) {
       window.scrollTo({
