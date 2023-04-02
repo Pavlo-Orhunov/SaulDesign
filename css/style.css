@@ -241,11 +241,21 @@ body {
   gap: 2.8rem;
 }
 .tabs-works__item {
-  background: rgba(57, 62, 70, 0.5);
+  background-color: rgba(57, 62, 70, 0.5);
   backdrop-filter: blur(2px);
   border-radius: 16px;
   padding: 16%;
+  transition: background-color 0.3s ease 0s, transform 0.3s ease 0s;
+  -webkit-transition: background-color 0.3s ease 0s, transform 0.3s ease 0s;
+  -moz-transition: background-color 0.3s ease 0s, transform 0.3s ease 0s;
 }
+.tabs-works__item:hover {
+  background-color: rgba(57, 62, 70, 0.9);
+}
+.tabs-works__item:active {
+  transform: scale(0.98);
+}
+
 .tabs-works__image {
   position: relative;
   display: block;
