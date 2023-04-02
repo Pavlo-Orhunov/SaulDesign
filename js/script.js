@@ -23,4 +23,22 @@ function documentActions(e) {
 
     e.preventDefault()
   }
+  // tabs
+  if (
+    targetElement.classList.contains("tabs-works__button") &&
+    !targetElement.classList.contains("active")
+  ) {
+    const activeElement = document.querySelector(".tabs-works__button.active")
+    const elements = document.querySelectorAll(".tabs-works__item")
+    const elementType = targetElement.dataset.workType
+
+    activeElement.classList.remove("active")
+    targetElement.classList.add("active")
+
+    elements.forEach((element) => {
+      !elementType || element.dataset.workType === elementType
+        ? (element.hidden = false)
+        : (element.hidden = true)
+    })
+  }
 }

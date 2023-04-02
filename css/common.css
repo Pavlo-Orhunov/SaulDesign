@@ -45,11 +45,10 @@
 }
 
 .button-accent:hover,
-.button-accent:focus {
+.button-gray.active:hover {
   background-color: hsl(183, 100%, 30%);
 }
-.button-gray:hover,
-.button-gray:focus {
+.button-gray:hover {
   background-color: hsla(217, 10%, 25%, 1);
 }
 
