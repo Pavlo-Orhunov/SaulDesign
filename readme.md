@@ -10,4 +10,4 @@ Responsive website layout from scratch for beginners. Explanation of actions. In
 
 `Link for the video`
 
-[![Responsive website layout](https://youtu.be/H-a0tMcrYCg/hqdefault.jpg "Responsive website layout")](https://youtu.be/H-a0tMcrYCg?t=7)
+[![Responsive website layout](https://i3.ytimg.com/vi/H-a0tMcrYCg/hqdefault.jpg "Responsive website layout")](https://youtu.be/H-a0tMcrYCg?t=7)
