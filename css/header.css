@@ -41,6 +41,7 @@
   -moz-transition: transform 0.3s ease 0s;
 }
 .menu__link {
+  font-size: 1.125rem;
   color: var(--color-font);
   transition: color 0.3s ease 0s;
   -webkit-transition: color 0.3s ease 0s;

@@ -6,8 +6,6 @@
 @import url("common.css");
 /*-------header-------------*/
 @import url("header.css");
-/*--------main page------------*/
-@import url("main.css");
 /*--------footer------------*/
 @import url("footer.css");
 /*--------------------*/
@@ -18,9 +16,11 @@
   --color-bgnd: #222831;
   --color-gray: rgba(57, 62, 70, 0.5);
 }
+html {
+  /* font-size: 16px; */
+}
 body {
   font-family: Poppins, Tahoma, sans-serif;
-  font-size: 1.125rem;
   line-height: 1.5; /* 27/18 */
   color: var(--color-font);
   background-color: var(--color-bgnd);
@@ -168,6 +168,7 @@ body {
 .about__title {
 }
 .about__text {
+  font-size: 1.125rem;
   max-width: 389px;
 }
 .about__text:not(:last-child) {
@@ -324,6 +325,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+  font-size: 1.125rem;
 }
 .form__item {
 }

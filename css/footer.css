@@ -37,6 +37,7 @@
   transform: scale(0.95);
 }
 .menu-footer__link {
+  font-size: 1.125rem;
   color: var(--color-font);
   padding-left: 34px;
 }
