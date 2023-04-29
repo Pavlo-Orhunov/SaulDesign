@@ -1,7 +1,7 @@
-/*-----Reset style-----*/
-@import url("reset.css");
 /*-----Fonts------------*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+/*-----Reset style-----*/
+@import url("reset.css");
 /*------Common styles----------*/
 @import url("common.css");
 /*-------header-------------*/
@@ -170,6 +170,9 @@ body {
 .about__text {
   font-size: 1.125rem;
   max-width: 389px;
+}
+.about__text a {
+  color: var(--color-font);
 }
 .about__text:not(:last-child) {
   margin-bottom: 1rem;
