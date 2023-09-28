@@ -21,16 +21,15 @@ Responsive website layout from scratch for beginners. Explanation of actions. In
 - contacts form
 
 `Link to the layout Page`
-https://pavlo-orhunov.github.io/Home-Services/
-
+https://pavlo-orhunov.github.io/SaulDesign/
 <br>
 
 **_Preview for desktop layout version:_**
 
-![Desktop version preview](https://github.com/Pavlo-Orhunov/Home-Services/blob/master/images/desktop.jpg "Desktop version preview")
+![Desktop version preview](https://github.com/Pavlo-Orhunov/SaulDesign/blob/master/img/desktop.jpg "Desktop version preview")
 
 <br>
 
 **_Preview for mobile layout version:_**
 
-![Mobile version preview](https://github.com/Pavlo-Orhunov/Home-Services/blob/master/images/mobile.jpg "Mobile version preview")
+![Mobile version preview](https://github.com/Pavlo-Orhunov/SaulDesign/blob/master/img/mobile.jpg "Mobile version preview")
