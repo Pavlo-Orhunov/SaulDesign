@@ -32,4 +32,4 @@ https://pavlo-orhunov.github.io/SaulDesign/
 
 **_Preview for mobile layout version:_**
 
-![Mobile version preview](https://github.com/Pavlo-Orhunov/SaulDesign/blob/master/img/mobile.jpg "Mobile version preview")
+![Mobile version preview]( "Mobile version preview")
