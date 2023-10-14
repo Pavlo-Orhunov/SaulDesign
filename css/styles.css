@@ -11,7 +11,7 @@
   /* colors */
   --color-font: #eeeeee;
   --color-accent: #00adb5;
-  --color-bgnd: #222831;
+  --color-bg: #222831;
   --color-gray: rgba(57, 62, 70, 0.5);
 }
 /*-----Reset style-----*/
@@ -92,10 +92,6 @@ h6 {
 }
 
 /*------Common styles----------*/
-/* -------hide element--------- */
-.hide {
-  display: none;
-}
 /* -------headings--------- */
 .title-h2 {
   font-weight: 700;
@@ -103,7 +99,7 @@ h6 {
   line-height: 1.5; /* 96/64 */
 }
 .title-h2 span {
-  color: var(--color-accent);
+  color: var(--color-accent, #00adb5);
 }
 @media (max-width: 479.98px) {
   .title-h2 {
@@ -124,29 +120,27 @@ h6 {
   font-size: 1.125rem;
   line-height: 1.5; /* 27/18 */
   font-weight: 700;
-  color: var(--color-font);
+  color: var(--color-font, #eeeeee);
   cursor: pointer;
   white-space: nowrap;
   transition: background-color 0.3s ease 0s, transform 0.3s ease 0s;
-  -webkit-transition: background-color 0.3s ease 0s, transform 0.3s ease 0s;
-  -moz-transition: background-color 0.3s ease 0s, transform 0.3s ease 0s;
 }
 .button-accent,
 .button-gray.active {
-  background-color: var(--color-accent);
+  background-color: var(--color-accent, #00adb5);
 }
 .button-gray {
-  background-color: var(--color-gray);
+  background-color: var(--color-gray, rgba(57, 62, 70, 0.5));
 }
-
-.button-accent:hover,
-.button-gray.active:hover {
-  background-color: hsl(183, 100%, 30%);
+@media (any-hover: hover) {
+  .button-accent:hover,
+  .button-gray.active:hover {
+    background-color: hsl(183, 100%, 30%);
+  }
+  .button-gray:hover {
+    background-color: hsla(217, 10%, 25%, 1);
+  }
 }
-.button-gray:hover {
-  background-color: hsla(217, 10%, 25%, 1);
-}
-
 .button-accent:active,
 .button-gray:active {
   transform: scale(0.95);
@@ -168,22 +162,19 @@ h6 {
     width: 0%;
     left: 50%;
     transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     transition: width 0.3s ease 0s;
-    -webkit-transition: width 0.3s ease 0s;
-    -moz-transition: width 0.3s ease 0s;
   }
   .underline-white::after {
-    background-color: var(--color-font);
+    background-color: var(--color-font, #eeeeee);
   }
   .underline-accent::after {
-    background-color: var(--color-accent);
+    background-color: var(--color-accent, #00adb5);
   }
-
-  .underline-white:hover::after,
-  .underline-accent:hover::after {
-    width: 120%;
+  @media (any-hover: hover) {
+    .underline-white:hover::after,
+    .underline-accent:hover::after {
+      width: 120%;
+    }
   }
 }
 
@@ -197,8 +188,8 @@ h6 {
   border-bottom: 1px solid rgba(238, 238, 238, 0.1);
   background: rgba(34, 40, 49, 0.83);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.9px);
   -webkit-backdrop-filter: blur(5.9px);
+  backdrop-filter: blur(5.9px);
 }
 
 .header__container {
@@ -227,18 +218,16 @@ h6 {
 .menu__item {
   white-space: nowrap;
   transition: transform 0.3s ease 0s;
-  -webkit-transition: transform 0.3s ease 0s;
-  -moz-transition: transform 0.3s ease 0s;
 }
 .menu__link {
   font-size: 1.125rem;
-  color: var(--color-font);
+  color: var(--color-font, #eeeeee);
   transition: color 0.3s ease 0s;
-  -webkit-transition: color 0.3s ease 0s;
-  -moz-transition: color 0.3s ease 0s;
 }
-.menu__link:hover {
-  color: var(--color-accent);
+@media (any-hover: hover) {
+  .menu__link:hover {
+    color: var(--color-accent, #00adb5);
+  }
 }
 .menu__item:active {
   transform: scale(0.95);
@@ -293,15 +282,13 @@ h6 {
 }
 .menu-footer__item {
   transition: transform 0.3s ease 0s;
-  -webkit-transition: transform 0.3s ease 0s;
-  -moz-transition: transform 0.3s ease 0s;
 }
 .menu-footer__item:active {
   transform: scale(0.95);
 }
 .menu-footer__link {
   font-size: 1.125rem;
-  color: var(--color-font);
+  color: var(--color-font, #eeeeee);
   padding-left: 34px;
 }
 .menu-footer__link--home {
@@ -343,11 +330,11 @@ h6 {
 }
 .social__link {
   transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
-  -webkit-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
-  -moz-transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
 }
-.social__link:hover {
-  opacity: 0.5;
+@media (any-hover: hover) {
+  .social__link:hover {
+    opacity: 0.5;
+  }
 }
 .social__link:active {
   transform: scale(0.85);
@@ -357,8 +344,8 @@ h6 {
 body {
   font-family: Poppins, Tahoma, sans-serif;
   line-height: 1.5; /* 27/18 */
-  color: var(--color-font);
-  background-color: var(--color-bgnd);
+  color: var(--color-font, #eeeeee);
+  background-color: var(--color-bg, #222831);
 }
 /*--------------------*/
 .wrapper {
@@ -410,7 +397,7 @@ body {
   line-height: 1;
 }
 .hero__title span {
-  color: var(--color-accent);
+  color: var(--color-accent, #00adb5);
 }
 .hero__title:not(:last-child) {
   margin-bottom: 3rem;
@@ -432,7 +419,6 @@ body {
 
 .hero__image {
   flex: 0 0 42.8%; /* 535/1250 */
-  /* text-align: center; */
 }
 .hero__image img {
   max-width: 100%;
@@ -486,9 +472,16 @@ body {
     font-size: 3rem;
   }
 }
+@media (max-height: 560px) {
+  .header__container {
+    min-height: 3.5rem;
+  }
+  .hero {
+    padding-top: 3.5rem;
+  }
+}
 
 /*------about section--------------*/
-
 .about {
   padding-top: 7.25rem;
   padding-bottom: 7.25rem;
@@ -508,7 +501,7 @@ body {
   max-width: 389px;
 }
 .about__text a {
-  color: var(--color-font);
+  color: var(--color-font, #eeeeee);
 }
 .about__text:not(:last-child) {
   margin-bottom: 1rem;
@@ -546,11 +539,12 @@ body {
     font-size: 1rem;
   }
 }
+
 /*------works section--------------*/
 .works {
   padding-top: 9.125rem;
   padding-bottom: 9.125rem;
-  background: url(../img/main/works/bacground.png) 0 0 / cover no-repeat;
+  background: url(../img/main/works/bg.png) 0 0 / cover no-repeat;
 }
 .works__container {
 }
@@ -585,11 +579,11 @@ body {
   border-radius: 16px;
   padding: 16%;
   transition: background-color 0.3s ease 0s, transform 0.3s ease 0s;
-  -webkit-transition: background-color 0.3s ease 0s, transform 0.3s ease 0s;
-  -moz-transition: background-color 0.3s ease 0s, transform 0.3s ease 0s;
 }
-.tabs-works__item:hover {
-  background-color: rgba(57, 62, 70, 0.9);
+@media (any-hover: hover) {
+  .tabs-works__item:hover {
+    background-color: rgba(57, 62, 70, 0.9);
+  }
 }
 .tabs-works__item:active {
   transform: scale(0.98);
@@ -639,7 +633,6 @@ body {
 }
 
 /*------contacts section--------------*/
-
 .contacts {
   padding-top: 157px;
   padding-bottom: 135px;
@@ -696,8 +689,6 @@ textarea.form__input {
 .form__input::placeholder {
   color: rgba(238, 238, 238, 0.5);
   transition: opacity 0.3s ease 0s;
-  -webkit-transition: opacity 0.3s ease 0s;
-  -moz-transition: opacity 0.3s ease 0s;
 }
 .form__input:focus::placeholder {
   opacity: 0;
