@@ -2,7 +2,7 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
-* Browsers: > 0.4% and not dead
+* Browsers: > 0.3% and not dead
 */
 
 /*-----Fonts------------*/
@@ -123,7 +123,10 @@ h6 {
   color: var(--color-font, #eeeeee);
   cursor: pointer;
   white-space: nowrap;
+  transition: background-color 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, transform 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s, transform 0.3s ease 0s,
+    -webkit-transform 0.3s ease 0s;
 }
 .button-accent,
 .button-gray.active {
@@ -143,6 +146,7 @@ h6 {
 }
 .button-accent:active,
 .button-gray:active {
+  -webkit-transform: scale(0.95);
   transform: scale(0.95);
 }
 
@@ -161,6 +165,7 @@ h6 {
     height: 2px;
     width: 0%;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     transition: width 0.3s ease 0s;
   }
@@ -217,7 +222,9 @@ h6 {
 }
 .menu__item {
   white-space: nowrap;
+  transition: -webkit-transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 .menu__link {
   font-size: 1.125rem;
@@ -230,6 +237,7 @@ h6 {
   }
 }
 .menu__item:active {
+  -webkit-transform: scale(0.95);
   transform: scale(0.95);
 }
 
@@ -281,9 +289,12 @@ h6 {
   align-items: center;
 }
 .menu-footer__item {
+  transition: -webkit-transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 .menu-footer__item:active {
+  -webkit-transform: scale(0.95);
   transform: scale(0.95);
 }
 .menu-footer__link {
@@ -329,7 +340,10 @@ h6 {
 .social {
 }
 .social__link {
+  transition: opacity 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s, transform 0.3s ease 0s,
+    -webkit-transform 0.3s ease 0s;
 }
 @media (any-hover: hover) {
   .social__link:hover {
@@ -337,6 +351,7 @@ h6 {
   }
 }
 .social__link:active {
+  -webkit-transform: scale(0.85);
   transform: scale(0.85);
 }
 
@@ -578,7 +593,10 @@ body {
   backdrop-filter: blur(2px);
   border-radius: 16px;
   padding: 16%;
+  transition: background-color 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   transition: background-color 0.3s ease 0s, transform 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s, transform 0.3s ease 0s,
+    -webkit-transform 0.3s ease 0s;
 }
 @media (any-hover: hover) {
   .tabs-works__item:hover {
@@ -586,6 +604,7 @@ body {
   }
 }
 .tabs-works__item:active {
+  -webkit-transform: scale(0.98);
   transform: scale(0.98);
 }
 
@@ -686,9 +705,17 @@ textarea.form__input {
   max-height: 500px;
   resize: vertical;
 }
+.form__input::-webkit-input-placeholder {
+  color: rgba(238, 238, 238, 0.5);
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
 .form__input::placeholder {
   color: rgba(238, 238, 238, 0.5);
   transition: opacity 0.3s ease 0s;
+}
+.form__input:focus::-webkit-input-placeholder {
+  opacity: 0;
 }
 .form__input:focus::placeholder {
   opacity: 0;
@@ -700,6 +727,61 @@ textarea.form__input {
   padding-right: 35px;
   background: url(../img/main/contacts/send.svg) right no-repeat;
 }
+
+/* Popups with dimming */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#success-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background-color: var(--color-accent, #00adb5);
+  margin-inline: 15px;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+#error-message {
+  text-wrap: balance;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  color: red;
+}
+#success-message {
+  text-wrap: balance;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  color: green;
+}
+
+.popup-btn {
+  width: 100%;
+}
+
 @media (max-width: 1200px) {
   .contacts {
     padding-top: 4rem;

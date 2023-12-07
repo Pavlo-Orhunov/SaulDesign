@@ -7,7 +7,7 @@
     <title>Saul Design Landing Page</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="favicon.png" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.min.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -132,7 +132,7 @@
                 <img src="./img/main/contacts/image.svg" alt="image" />
               </div>
             </div>
-            <form action="#" class="contacts__form form">
+            <form class="contacts__form form" name="submit-to-google-sheet">
               <div class="form__item">
                 <label for="name" class="form__label">Your name</label>
                 <input
@@ -170,6 +170,26 @@
                 </button>
               </div>
             </form>
+          </div>
+
+          <!-- Dimmed pop-up window for error message -->
+          <div id="overlay">
+            <div class="popup">
+              <p id="error-message"></p>
+              <button class="popup-btn button-gray" onclick="closePopup()">
+                Close
+              </button>
+            </div>
+          </div>
+
+          <!-- Dimming pop-up for successful submission message -->
+          <div id="success-overlay">
+            <div class="popup">
+              <p id="success-message"></p>
+              <button class="popup-btn button-gray" onclick="closePopup()">
+                Close
+              </button>
+            </div>
           </div>
         </section>
       </main>
