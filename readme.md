@@ -22,14 +22,33 @@ Responsive website layout from scratch for beginners. Explanation of actions. In
 
 `Link to the layout Page`
 https://pavlo-orhunov.github.io/SaulDesign/
+
 <br>
 
-**_Preview for desktop layout version:_**
+**_Preview for desktop (1920px) layout version:_** ⬇️
 
 ![Desktop version preview](https://github.com/Pavlo-Orhunov/SaulDesign/blob/master/img/desktop.jpg "Desktop version preview")
 
 <br>
 
-**_Preview for mobile layout version:_**
+**_Preview for laptop (1440px) layout version:_** ⬇️
 
-![Mobile version preview](https://github.com/Pavlo-Orhunov/SaulDesign/blob/master/img/mobile.jpg?raw=true "Mobile version preview")
+![Laptop version preview](https://github.com/Pavlo-Orhunov/SaulDesign/blob/master/img/laptop.jpg "Laptop version preview")
+
+<br>
+
+**_Preview for mobile-portrait (360px) layout version:_** ⬇️
+
+![Mobile version preview](https://github.com/Pavlo-Orhunov/SaulDesign/blob/master/img/mobile-p.jpg "Mobile-portrait version preview")
+
+<br>
+
+**_Preview for mobile-landscape layout version:_** ⬇️
+
+![Mobile version preview](https://github.com/Pavlo-Orhunov/SaulDesign/blob/master/img/mobile-l.jpg "Mobile-landscape version preview")
+
+<br>
+
+**_Preview for tablet (810px) layout version:_** ⬇️
+
+![Tablet version preview](https://github.com/Pavlo-Orhunov/SaulDesign/blob/master/img/tablet.jpg "Tablet version preview")
